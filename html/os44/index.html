@@ -1,60 +1,66 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE html [
-	<!ENTITY lf "&#10;">
-	<!ENTITY nbsp "&#160;">
-	<!ENTITY yen "&#165;">
-	<!ENTITY copy "&#169;">
-	<!ENTITY laquo "&#171;">
-	<!ENTITY raquo "&#187;">
-	<!ENTITY plusmn "&#177;">
-	<!ENTITY minus "&#8722;">
-	<!ENTITY hellip "&#8230;">
-	<!ENTITY pageTitle "OpenStickerのCSSをv4対応にするの">
+        <!ENTITY lf "&#10;">
+        <!ENTITY nbsp "&#160;">
+        <!ENTITY yen "&#165;">
+        <!ENTITY copy "&#169;">
+        <!ENTITY laquo "&#171;">
+        <!ENTITY raquo "&#187;">
+        <!ENTITY plusmn "&#177;">
+        <!ENTITY minus "&#8722;">
+        <!ENTITY hellip "&#8230;">
+        <!ENTITY pageTitle "OpenStickerのCSSをv4対応にするの">
 ]>
 <html lang="ja-jp" xml:lang="ja-jp" xmlns="http://www.w3.org/1999/xhtml">
 <head>
-	<meta charset="UTF-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<title>&pageTitle;</title>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>&pageTitle;</title>
 </head>
 <body class="top">
 
 <section id="content">
-	<header id="contentTop">
-		<div class="topTitle">
-			<h1>&pageTitle;</h1>
-			<span><a href="https://github.com/cutls/OpenSticker">OpenSticker</a> のカスタムCSSを Mastodon v4 系に対応させます</span>
-		</div>
-	</header><!-- /#contentTop -->
+        <header id="contentTop">
+                <div class="topTitle">
+                        <h1>&pageTitle;</h1>
+                        <span><a href="https://github.com/cutls/OpenSticker">OpenSticker</a> のカスタムCSSを Mastodon v4 系に対応させます</span>
+                </div>
+        </header><!-- /#contentTop -->
 
     <section id="contentBody">
 
-		<h2>つかいかた</h2>
-		<ol>
-			<li><a href="https://opensticker.0px.io">OpenSticker のジェネレータ</a>からCSSを取得する</li>
-			<li>CSSを下のボックスに貼り付ける</li>
-			<li>[convert] をおす</li>
-			<li>右か下に結果が出るので、内容をコピーして Mastodon の 管理 &raquo; サーバー設定 &raquo; 外観 &raquo; カスタムCSS に貼り付ける</li>
-		</ol>
+                <h2>つかいかた</h2>
+                <ol>
+                        <li><a href="https://opensticker.0px.io">OpenSticker のジェネレータ</a>からCSSを取得する</li>
+                        <li>CSSを下のボックスに貼り付ける</li>
+                        <li>[convert] をおす</li>
+                        <li>右か下に結果が出るので、内容をコピーして Mastodon の 管理 &raquo; サーバー設定 &raquo; 外観 &raquo; カスタムCSS に貼り付ける</li>
+                </ol>
 
-		<button onclick="javascript:conv()">convert</button><br />
+                <button onclick="javascript:conv()">convert</button><br />
         <textarea id="str1" cols="50" rows="10"></textarea>
         <textarea id="str2" cols="50" rows="10" style="display:none"></textarea>
+
+        <h2>Outline</h2>
+        <p>
+                <iframe src="https://don.kumarin.co/@mg/109822401434388867/embed" class="mastodon-embed" style="max-width: 100%; border: 0" width="400" allowfullscreen="allowfullscreen"></iframe>
+                <script src="https://don.kumarin.co/embed.js" async="async"></script>
+        </p>
 
     </section><!-- /#contentBody -->
 
 </section><!-- /#content -->
 
 <script type="text/javascript">
-	function conv(){
-		t1 = document.getElementById("str1");
-		t2 = document.getElementById("str2");
-		s = t1.value;
-		s = s.replace(/href\^='https:\/\//g, "href$='@");
-		s = s.replace(/\/']/g, "']");
-		t2.value = s;
-		t2.style.display = "inline";
-	}
+        function conv(){
+                t1 = document.getElementById("str1");
+                t2 = document.getElementById("str2");
+                s = t1.value;
+                s = s.replace(/href\^='https:\/\//g, "href$='@");
+                s = s.replace(/\/']/g, "']");
+                t2.value = s;
+                t2.style.display = "inline";
+        }
 </script>
 
 </body>
