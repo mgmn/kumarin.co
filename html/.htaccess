@@ -1,0 +1,4 @@
+DirectoryIndex index.php index.xhtml index.html
+
+# webfinger for mastodon WEB_DOMAIN
+RedirectMatch 301 ^/(\.well-known/webfinger.*)$ https://don.kumarin.co/$1
