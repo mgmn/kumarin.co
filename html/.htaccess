@@ -8,3 +8,6 @@ RewriteRule ^.*$ - [F]
 
 # webfinger for mastodon WEB_DOMAIN
 RedirectMatch 301 ^/(\.well-known/webfinger.*)$ https://don.kumarin.co/$1
+
+# strict transport security
+Header Set "Strict-Transport-Security" "max-age=31536000"
