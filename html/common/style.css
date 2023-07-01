@@ -1,6 +1,4 @@
 @charset "UTF-8";
-@import url(//koruri.chillout.chat/koruri.css);
-
 
 /**************
  * Common
@@ -22,10 +20,10 @@ body{
 	padding: 0;
 	background-color: #333;
 	background-image: url('./cloth.png');
-	color: #777;
+	color: #fff;
 	text-align: center;
 	font-size: 15px;
-	font-family: 'Koruri', sans-serif;
+	font-family: sans-serif;
 	line-height: 1.5em;
 }
 
@@ -100,6 +98,7 @@ abbr{
 	min-height: 100%;
 	margin: 48px auto 0;
 	background-color: #ccc;
+	color: #666;
 	background-image: url('./sand.png');
 	box-shadow: 0 0 16px rgba(0, 0, 0, .5);
 }
@@ -154,16 +153,19 @@ abbr{
 	box-shadow: 0 0 4px rgba(0, 0, 0, .25);
 }
 .topTitle h1{
-	margin: 28px 40px 8px 31px;
+	margin: 28px 40px 0 32px;
 	font-size: 2em;
 	font-weight: 300;
 	letter-spacing: .01em;
 	color: #666;
 }
+.topTitle svg g{
+	fill: #666;
+}
 .topTitle span{
 	display: block;
 	margin: 0 40px 24px 32px;
-	font-size: .85em;
+	font-size: 1em;
 	letter-spacing: .01em;
 	color: #666;
 }
@@ -534,11 +536,14 @@ article.card footer time{
 	}
 	.topTitle h1{
 		margin: 28px 0 8px;
-		margin-left: .1em;  /* kerning */
+		margin-left: .05em;  /* kerning */
 		font-size: 2em;
 		font-weight: 300;
 		letter-spacing: 2px;
 		color: #eee;
+	}
+	.topTitle svg g{
+		fill: #eee;
 	}
 	.topTitle span{
 		display: block;
