@@ -102,16 +102,16 @@ abbr{
 	background-image: url('./sand.png');
 	box-shadow: 0 0 16px rgba(0, 0, 0, .5);
 }
-#contentFooter{
+#content>footer{
 	padding: 24px 0 16px;
 	clear: left;
 	font-size: .9em;
 	text-shadow: 1px 1px #ddd;
 }
-#contentFooter a{
+#content>footer a{
 	color: #666;
 }
-#contentFooter a:hover{
+#content>footer a:hover{
 	text-decoration: underline;
 }
 
@@ -513,7 +513,7 @@ article.card footer time{
 		height: 240px;
 		margin-bottom: -1em;
 	}
-	#contentFooter{
+	#content>footer{
 		padding: 8px;
 	}
 	#content ul,
