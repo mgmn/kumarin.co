@@ -116,7 +116,7 @@ abbr{
 }
 
 /**************************************************************/
-#contentTop{
+#content>header{
 	width: 100%;
 	height: 280px;
 	border-top-left-radius: 4px;
@@ -225,7 +225,7 @@ abbr{
 
 
 /**************
- * Cards
+ * Sections + Articles Framework
  **************************************************************/
 .clip{
 	width: 96px;
@@ -239,7 +239,7 @@ abbr{
 	background-position: 0 8px;
 }
 
-.card{
+.sheet>section, .sheet>article{
 	display: block;
 	margin: 24px 16px 24px 16px;
 	padding-bottom: 1px;
@@ -250,15 +250,17 @@ abbr{
 	background-color: #fff;
 	box-shadow: 0 0 4px rgba(0, 0, 0, .25);
 }
-.sheet1 .card{
+.sheet1>section, .sheet1>article{
 	clear: left;
 }
-.card.full{
+.sheet.full>section, .sheet.full>article{
 	clear: both;
 	width: 608px;
 	font-size: 1em !important;
 }
-.card h3{
+
+.sheet>section>header, .sheet>article>header{ min-height: 1px; }
+.sheet>section>header>h3, .sheet>article>header>h3{
 	padding: 10px .8em;
 	font-size: 1.45em;
 	font-weight: 300;
@@ -270,22 +272,15 @@ abbr{
 	background-color: #6af;
 }
 
-.card>header{ min-height: 1px; }
-.card>header>a{ display: block; }
-.card a:hover h3{
-	border-left: 64px solid #aef;
-	background-color: #9cf;
-}
-
 
 /**************
- * Cards -> Sections + Articles
+ * Sections + Articles Document Style
  **************************************************************/
-section.card p, article.card p{ margin: 1em; }
-section.card dl, article.card dl{ margin: 1em; }
-section.card dt, article.card dt{ font-weight: bold; }
-section.card dd, article.card dd{ margin: 0 0 1em 1em; }
-section.card h4, article.card h4{
+.sheet>section p, .sheet>article p{ margin: 1em; }
+.sheet>section dl, .sheet>article dl{ margin: 1em; }
+.sheet>section dt, .sheet>article dt{ font-weight: bold; }
+.sheet>section dd, .sheet>article dd{ margin: 0 0 1em 1em; }
+.sheet>section h4, .sheet>article h4{
 	position: relative;
 	width: 90%;
 	margin: 2em auto .5em;
@@ -294,10 +289,10 @@ section.card h4, article.card h4{
 	line-height: 3em;
 	clear: both;
 }
-section.card.full h4, article.card.full h4{
+.sheet.full>section h4, .sheet.full>article h4{
 	margin: 3em auto 1em;
 }
-section.card h4:before, article.card h4:before{
+.sheet>section h4:before, .sheet>article h4:before{
 	display: inline-block;
 	content: "";
 	width: .5em;
@@ -313,7 +308,7 @@ section.card h4:before, article.card h4:before{
 	-o-transform: rotate(-45deg);
 	-ms-transform: rotate(-45deg);
 }
-section.card h4:after, article.card h4:after{
+.sheet>section h4:after, .sheet>article h4:after{
 	display: inline-block;
 	content: "";
 	width: .5em;
@@ -330,58 +325,58 @@ section.card h4:after, article.card h4:after{
 	-ms-transform: rotate(45deg);
 }
 /******** Lists ********/
-section.card ul, section.card ol,
-article.card ul, article.card ol{ margin: 1em 1em 1em 2.5em; }
-section.card.full ul, section.card.full ol,
-article.card.full ul, article.card.full ol{ margin: 1em 1em 1em 3em; }
+.sheet>section ul, .sheet>section ol,
+.sheet>article ul, .sheet>article ol{ margin: 1em 1em 1em 2.5em; }
+.sheet.full>section ul, .sheet.full>section ol,
+.sheet.full>article ul, .sheet.full>article ol{ margin: 1em 1em 1em 3em; }
 
-section.card ul, article.card ul{ list-style: circle url('./list-disc.svg'); }
-section.card ol, article.card ol{ list-style-type: decimal; }
+.sheet>section ul, .sheet>article ul{ list-style: circle url('./list-disc.svg'); }
+.sheet>section ol, .sheet>article ol{ list-style-type: decimal; }
 
-section.card ul li, section.card ol li,
-article.card ul li, article.card ol li{
+.sheet>section ul li, .sheet>section ol li,
+.sheet>article ul li, .sheet>article ol li{
 	margin: .3em 0;
 	line-height: 1.6em;
 }
 
 /******** Figures ********/
-section.card .centerFig, article.card .centerFig{
+.sheet>section .centerFig, .sheet>article .centerFig{
 	width: 100%;
 	margin: 2em 0;
 	text-align: center;
 	clear: both;
 	overflow-x: auto;
 }
-section.card .centerFig>*, article.card .centerFig>*,
-section.card .rightFig>*, article.card .rightFig>*{
+.sheet>section .centerFig>*, .sheet>article .centerFig>*,
+.sheet>section .rightFig>*, .sheet>article .rightFig>*{
 	display: block;
 	margin-left: auto !important;
 	margin-right: auto !important;
 }
-section.card.full .centerFig img, article.card.full .centerFig img,
-section.card.full .rightFig img, article.card.full .rightFig img{
+.sheet.full>section .centerFig img, .sheet.full>article .centerFig img,
+.sheet.full>section .rightFig img, .sheet.full>article .rightFig img{
 	padding: 4px;
 	border: 1px solid #ccc;
 	z-index: 160;
 	box-shadow: 0 0 4px rgba(0, 0, 0, .25);
 }
-section.card figcaption, article.card figcaption{
+.sheet>section figcaption, .sheet>article figcaption{
 	margin: 1em 0;
 	font-size: .9em;
 }
 
-section.card .rightFig, article.card .rightFig{
+.sheet>section .rightFig, .sheet>article .rightFig{
 	max-width: 128px;
 	margin: 0 1.5em;
 	float: right;
 }
-section.card .rightFig figcaption, article.card .rightFig figcaption{
+.sheet>section .rightFig figcaption, .sheet>article .rightFig figcaption{
 	margin: .5em 0;
 	font-size: .8em;
 }
 
 /******** Quotations ********/
-section.card blockquote, article.card blockquote{
+.sheet>section blockquote, .sheet>article blockquote{
 	width: 90%;
 	margin: 1em auto;
 	padding: 1em 0;
@@ -390,11 +385,11 @@ section.card blockquote, article.card blockquote{
 	background-repeat: no-repeat, repeat;
 	text-align: left;
 }
-section.card blockquote>*:first-child, article.card blockquote>*:first-child{ margin-top: 0; }
-section.card blockquote>*:last-child, article.card blockquote>*:last-child{ margin-bottom: 0; }
+.sheet>section blockquote>*:first-child, .sheet>article blockquote>*:first-child{ margin-top: 0; }
+.sheet>section blockquote>*:last-child, .sheet>article blockquote>*:last-child{ margin-bottom: 0; }
 
 /******** Preformatted ********/
-section.card pre, article.card pre{
+.sheet>section pre, .sheet>article pre{
 	width: 90%;
 	margin: 1em auto;
 	padding: 1em;
@@ -406,14 +401,14 @@ section.card pre, article.card pre{
 	font-size: .8em;
 	line-height: 1.4em;
 }
-section.card pre.cmd, article.card pre.cmd{
+.sheet>section pre.cmd, .sheet>article pre.cmd{
 	font-family: "Consolas", "Bitstream Vera Sans Mono", "Courier New", Courier, monospace;
 	background-color: #3f3b30;
 	color: #efefef;
 }
 
 /******** Aside ********/
-section.card aside, article.card aside{
+.sheet>section aside, .sheet>article aside{
 	margin: 3em 1em;
 	border: 2px dashed #ccc;
 	font-size: .9em;
@@ -421,28 +416,28 @@ section.card aside, article.card aside{
 }
 
 /******** Form ********/
-section.card form input[type=submit], section.card form input[type=button], section.card form input[type=reset], section.card form button,
-article.card form input[type=submit], article.card form input[type=button], article.card form input[type=reset], article.card form button{
+.sheet>section form input[type=submit], .sheet>section form input[type=button], .sheet>section form input[type=reset], .sheet>section form button,
+.sheet>article form input[type=submit], .sheet>article form input[type=button], .sheet>article form input[type=reset], .sheet>article form button{
 	padding: .2em .5em;
 }
-section.card form input[type=radio],
-article.card form input[type=radio]{
+.sheet>section form input[type=radio],
+.sheet>article form input[type=radio]{
 	margin: .2em 0 .2em 1em;
 }
 
 ection.card form textarea,
-article.card form textarea{
+.sheet>article form textarea{
 	width: 50px;
 	box-shadow: 0 0 4px rgba(0, 0, 0, .25) inset;
 }
-section.card form fieldset,
-article.card form fieldset{
+.sheet>section form fieldset,
+.sheet>article form fieldset{
 	margin: 1em 1em 0;
 	padding: 1em;
 }
 
 /******** Table ********/
-section.card table, article.card table{
+.sheet>section table, .sheet>article table{
 	width: 90%;
 	margin: 1em auto;
 	border: 3px solid #6af;
@@ -450,48 +445,48 @@ section.card table, article.card table{
 	font-size: .8em;
 	word-break: break-all;
 }
-section.card th, article.card th,
-section.card td, article.card td{
+.sheet>section th, .sheet>article th,
+.sheet>section td, .sheet>article td{
 	border: 1px solid #6af;
 	padding: .5em;
 }
-section.card thead, article.card thead{
+.sheet>section thead, .sheet>article thead{
 	background-color: #9cf;
 	color: #fff;
 	text-shadow: 1px 1px #6af;
 }
-section.card tbody>tr:nth-child(2n),
-article.card tbody>tr:nth-child(2n){
+.sheet>section tbody>tr:nth-child(2n),
+.sheet>article tbody>tr:nth-child(2n){
 	background-color: #f9fbff;
 }
 
 /**************
- * Cards -> Sections
+ * Sections Document Style
  **************************************************************/
-section.card ul.feedList, section.card ol.feedList{
+.sheet>section ul.feedList, .sheet>section ol.feedList{
 	margin: 0;
 	list-style: none;
 }
-section.card ul.feedList>li, section.card ol.feedList>li{
+.sheet>section ul.feedList>li, .sheet>section ol.feedList>li{
 	margin: 0;
 	border-bottom: 1px solid #e8e8e8;
 	padding: .6em .75em .5em;
 }
-section.card ul.feedList>li:last-child,
-section.card ol.feedList>li:last-child{ border: 0; }
+.sheet>section ul.feedList>li:last-child,
+.sheet>section ol.feedList>li:last-child{ border: 0; }
 
 
 /**************
- * Cards -> Articles
+ * Articles Document Style
  **************************************************************/
-article.card footer{
+.sheet>article footer{
 	width: 100%;
 	margin: .5em 0;
 	text-align: right;
 	clear: both;
 }
-article.card footer>*:last-child{ margin-right: 1em; }
-article.card footer time{
+.sheet>article footer>*:last-child{ margin-right: 1em; }
+.sheet>article footer time{
 	color: #666;
 	font-style: italic;
 	font-size: .7em;
@@ -509,7 +504,7 @@ article.card footer time{
 		width: 100%;
 		margin: 0;
 	}
-	#contentTop{
+	#content>header{
 		height: 240px;
 		margin-bottom: -1em;
 	}
@@ -582,7 +577,7 @@ article.card footer time{
 	}
 
 	/* cards */
-	.card{
+	.sheet>section, .sheet>article{
 		width: calc(100% - 16px) !important;
 		width: -moz-calc(100% - 16px) !important;
 		width: -webkit-calc(100% - 16px) !important;
@@ -590,7 +585,7 @@ article.card footer time{
 		font-size: 1em;
 	}
 
-	section.card h4, article.card h4{
+	.sheet>section h4, .sheet>article h4{
 		margin: 1.5em auto .5em;
 	}
 
